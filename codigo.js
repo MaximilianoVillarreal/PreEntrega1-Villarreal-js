@@ -113,3 +113,63 @@ switch(modoDePago){
         alert ("Error")
         break
 }
+// Objetos
+const Buzo = {
+    Color: "Negro",
+    Marca: "Tussy",
+    Precio: "$30.000",
+    Vendido: false,
+}
+console.log (Buzo); {Color; "Negro", Marca; "Tussy", Precio; 30.000, Vendido; "false"}
+
+//Función Constructora
+function Remera(Color, Marca, Precio, Vendido, Talle){
+    this.Color = Color
+    this.Marca = Marca
+    this.Precio = Precio
+    this.Vendido = false
+    this.Talle = Talle
+}
+const Remera1 = new Remera ("Blanco", "Not Lost", 12.000, "Vendido", "L")
+console.log (Remera1)
+for(const caract in Remera1){
+    console.log (caract)
+    console.log (Remera1[caract])
+}
+// Metodos de Strings
+let frasedescuento = "Tienes un 10% de descuento en toda la página!"
+// Metodo toUpperCase
+console.log(frasedescuento.toUpperCase())
+
+// Class
+class Campera{
+    constructor(Color, Marca, Precio, Vendido, Talle){
+        this.Color = Color
+        this.Marca = Marca
+        this.Precio = Precio
+        this.Vendido = false
+        this.Talle = Talle
+    }
+    vendidaCampera(){
+        this.Vendido = true
+    }
+}
+const Campera1 = new Campera ("Rosa", "Nasty", 35.000, "Vendido", "M")
+const Campera2 = new Campera ("Azul", "Tussy", 40.000, "Vendido", "L")
+const Campera3 = new Campera ("Rojo", "Not Lost", 38.000, "Vendido", "XL")
+
+console.log (Campera2)
+
+// Arrays
+const listaArticulos = ["Buzos", "Camperas", "Remeras", "Pantalones", "Shorts", "Accesorios"]
+listaArticulos.splice (2, 0, "Remeras mangas largas")
+console.log (listaArticulos)
+let lista = listaArticulos.join ("-")
+// IndexOf
+let prod = prompt ("Ingresa el nombre del producto para ver su disponibilidad")
+const posicion = listaArticulos.indexOf(prod)
+if (posicion /= -1){
+    alert ("Producto disponible en la lista en la posicion" + posicion)
+}else{
+    alert ("El producto no se encuentra en la lista")
+}
