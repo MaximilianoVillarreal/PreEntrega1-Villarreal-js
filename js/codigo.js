@@ -3,13 +3,13 @@ function saludar(){
     let usuario = prompt ("Cúal es tu nombre")
     alert ("Bienvenido/a" + usuario)
 }
-function calcularDescuento(total,porcentaje) {
-    let descuento = total * (porcentaje /100)
+function calcularDescuento(montoFinal,porcentaje) {
+    let descuento = montoFinal * (porcentaje /100)
     return descuento
 }
 // Llamados
 saludar()
-calcularDescuento(total,porcentaje)
+// calcularDescuento(montoFinal,porcentaje)
 // Variables
 let montoFinal = parseFloat(prompt("Ingrese el monto final de su compra"))
 let modoDePago = prompt ("Modo de pago\n1-Efectivo\n2-Debito\n3-Credito")
@@ -17,19 +17,21 @@ let modoDePago = prompt ("Modo de pago\n1-Efectivo\n2-Debito\n3-Credito")
 const anioCreacionEmprendimiento = 2023;
 
 // Operaciones matemáticas
+let deuda = 10.000
 let suma = deuda + 100;
 let resta = deuda - 100;
 let multiplic = deuda * 3;
 let division = deuda / 3;
 
 // Concatenaciones
-let saludo = "Hola" + Cliente;
+
+// let saludo = "Hola" + cliente; NO funciona
 
 // Salida de datos a través de la consola
 console.log ("Bienvenido/a")
 
 // Salida de datos a través de alert
-alert (saludo)
+// alert (saludo)
 
 // Entrada de datos con prompt
 let mail = prompt ("Ingrese su mail")
@@ -114,13 +116,16 @@ switch(modoDePago){
         break
 }
 // Objetos
-const Buzo = {
+const Buzo1 = {
     Color: "Negro",
     Marca: "Tussy",
     Precio: "$30.000",
     Vendido: false,
+    Talle: "L"
 }
-console.log (Buzo); {Color; "Negro", Marca; "Tussy", Precio; 30.000, Vendido; "false"}
+// const Buzo1 = new Buzo ("Negro", "Tussy", 30.000, "Vendido", "L")
+// console.log (Buzo1); {Color; "Negro", Marca; "Tussy", Precio; 30.000, Vendido; "false"}
+console.log (Buzo1)
 
 //Función Constructora
 function Remera(Color, Marca, Precio, Vendido, Talle){
@@ -168,8 +173,16 @@ let lista = listaArticulos.join ("-")
 // IndexOf
 let prod = prompt ("Ingresa el nombre del producto para ver su disponibilidad")
 const posicion = listaArticulos.indexOf(prod)
-if (posicion /= -1){
+if (posicion !== -1){
     alert ("Producto disponible en la lista en la posicion" + posicion)
 }else{
     alert ("El producto no se encuentra en la lista")
 }
+// Funciones de Orden Superior
+const encontrar = Campera.find((Campera) => Campera.Marca == "Nasty")
+const existe = Campera.some (Campera => Campera.Marca == "Tussy")
+console.log (existe)
+console.log (Math.max(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
+console.log (Math.min(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
+const Lanzamiento = new Date (2023, 7, 10)
+alert (Lanzamiento)
