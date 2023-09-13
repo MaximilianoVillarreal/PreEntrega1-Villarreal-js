@@ -186,3 +186,20 @@ console.log (Math.max(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.
 console.log (Math.min(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
 const Lanzamiento = new Date (2023, 7, 10)
 alert (Lanzamiento)
+// DOM
+console.dir(document.body)
+// getElementById
+let seccionPrincipal = document.getElementById("principal")
+console.dir(seccionPrincipal)
+seccionPrincipal.style.background = "orange"
+let tituloH1 = document.getElementById("titulo")
+console.dir(tituloH1)
+tituloH1.innerText = "Llegó lo nuevo! 🎉"
+tituloH1.style.font = "bold 32px"
+// getElementByTagName
+let header = document.getElementsByTagName(header)
+console.dir(header)
+header.style.background = "black"
+let footer = document.getElementsByTagName(footer)
+console.dir(footer)
+header.style.background = "black"
