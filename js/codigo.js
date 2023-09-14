@@ -104,7 +104,7 @@ switch(modoDePago){
         alert ("Tienes un descuento de $" + descuentoEfectivo)
         break
     case '2':
-        let decuentoDebito = calcularDescuento(montoFinal, 10)
+        let descuentoDebito = calcularDescuento(montoFinal, 10)
         alert ("Tienes un descuento de $" + descuentoDebito)
         break
     case '3':
@@ -179,27 +179,89 @@ if (posicion !== -1){
     alert ("El producto no se encuentra en la lista")
 }
 // Funciones de Orden Superior
-const encontrar = Campera.find((Campera) => Campera.Marca == "Nasty")
-const existe = Campera.some (Campera => Campera.Marca == "Tussy")
-console.log (existe)
+// const encontrar = Campera.find((Campera) => Campera.Marca == "Nasty")
+// const existe = Campera.some (Campera => Campera.Marca == "Tussy")
+// console.log (existe)
 console.log (Math.max(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
 console.log (Math.min(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
 const Lanzamiento = new Date (2023, 7, 10)
 alert (Lanzamiento)
 // DOM
 console.dir(document.body)
+
 // getElementById
 let seccionPrincipal = document.getElementById("principal")
 console.dir(seccionPrincipal)
-seccionPrincipal.style.background = "orange"
+seccionPrincipal.style.backgroundColor = "orange"
 let tituloH1 = document.getElementById("titulo")
 console.dir(tituloH1)
 tituloH1.innerText = "Llegó lo nuevo! 🎉"
 tituloH1.style.font = "bold 32px"
+
 // getElementByTagName
-let header = document.getElementsByTagName(header)
+let header = document.getElementsByTagName("header")
 console.dir(header)
-header.style.background = "black"
-let footer = document.getElementsByTagName(footer)
+header.style.backgroundColor = "black"
+let footer = document.getElementsByTagName("footer")
 console.dir(footer)
-header.style.background = "black"
+header.style.backgroundColor = "black"
+
+//Array de productos
+const productos = [
+    { id: 1, nombre: "Buzo", precio: 125 },
+    { id: 2, nombre: "Buzo", precio: 70 },
+    { id: 3, nombre: "Campera", precio: 50 },
+    { id: 4, nombre: "Campera", precio: 100 },
+    { id: 5, nombre: "Remera", precio: 200 },
+    { id: 6, nombre: "Remera", precio: 900 },
+    { id: 7, nombre: "Pantalón", precio: 100 },
+    { id: 8, nombre: "Pantalón", precio: 80 },
+    { id: 9, nombre: "Short", precio: 30 },
+    { id: 10, nombre: "Short", precio: 76 },
+    { id: 11, nombre: "Gorra", precio: 10 },
+    { id: 12, nombre: "Riñonera", precio: 9 },
+];
+
+campoCantidad.value = productos.length;
+
+//Tarjetas para productos
+let articuloCartas = document.getElementById('cartas');
+articuloCartas.classList.add('container');
+articuloCartas.classList.add('gap-3');
+articuloCartas.classList.add('mx-auto');
+articuloCartas.classList.add('my-3');
+
+function renderizarProds(productos){
+for (const producto of productos){
+    articuloCartas.innerHTML += `
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=${producto.foto} alt=${producto.nombre}/>
+        <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">Precio $ ${producto.precio}</p>
+            <button id=${producto.id} class="btn btn-light compra">Comprar</button>
+        </div>
+    </div>
+    `;
+}
+    //eventos
+    let botones = document.getElementsByClassName('compra');
+    for (const boton of botones) {
+    // addEventListener
+        boton.addEventListener('click', () => {
+            console.log('Hiciste click en el boton cuyo id es ' + boton.id);
+            const prodACarro = listaProds.find((producto) => producto.id == boton.id);
+            console.log(prodACarro);
+    //Cargar producto al carrito
+            agregarAlCarrito(prodACarro);
+        });
+        boton.onmouseover = () => boton.classList.replace('btn-light', 'btn-dark');
+        boton.onmouseout = () => boton.classList.replace('btn-dark', 'btn-light');
+    }
+}
+renderizarProds(productos);
+
+function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    console.table(carrito);
+    alert(`Agregaste ${producto.nombre} al carro 🛒`); }
