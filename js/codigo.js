@@ -192,7 +192,7 @@ console.dir(document.body)
 // getElementById
 let seccionPrincipal = document.getElementById("principal")
 console.dir(seccionPrincipal)
-seccionPrincipal.style.backgroundColor = "orange"
+seccionPrincipal.style.backgroundColor = "black"
 let tituloH1 = document.getElementById("titulo")
 console.dir(tituloH1)
 tituloH1.innerText = "Llegó lo nuevo! 🎉"
