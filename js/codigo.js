@@ -201,10 +201,14 @@ tituloH1.style.font = "bold 32px"
 // getElementByTagName
 let header = document.getElementsByTagName("header")
 console.dir(header)
-header.style.backgroundColor = "black"
+for (let i=0; i<headers.length; i++){
+    headers[i].style.backgroundColor = "black"
+}
 let footer = document.getElementsByTagName("footer")
 console.dir(footer)
-header.style.backgroundColor = "black"
+for (let i=0; i<footers.length; i++){
+    footers[i].style.backgroundColor = "black"
+}
 
 //Array de productos
 const productos = [
@@ -265,3 +269,33 @@ function agregarAlCarrito(producto) {
     carrito.push(producto);
     console.table(carrito);
     alert(`Agregaste ${producto.nombre} al carro 🛒`); }
+
+// Storage
+// localStorage.setItem('usuario','Maximiliano1112');
+// let usuario = localStorage.getItem('usuario');
+localStorage.setItem("Stock", JSON.stringify(productos))
+
+boton.onclick = () => {
+    if(localStorage.getItem('mode') == 'dark'){
+        pasarALight();
+    }else{
+        pasarADark();
+    }
+}
+
+const contenedor = document.getElementById('principal');
+const boton = document.getElementById('mode');
+
+function pasarADark(){
+    document.body.className='dark';
+    contenedor.classList.replace('light','dark');
+    boton.innerText = 'Light Mode';
+    localStorage.setItem('mode','dark');
+}
+
+function pasarALight(){
+    document.body.className='light';
+    contenedor.classList.replace('dark','light');
+    boton.innerText = 'Dark Mode';
+    localStorage.setItem('mode','light');
+}
