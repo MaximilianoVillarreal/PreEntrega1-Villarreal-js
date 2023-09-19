@@ -192,23 +192,16 @@ console.dir(document.body)
 // getElementById
 let seccionPrincipal = document.getElementById("principal")
 console.dir(seccionPrincipal)
-seccionPrincipal.style.backgroundColor = "black"
+seccionPrincipal.style.backgroundColor = "orange"
 let tituloH1 = document.getElementById("titulo")
 console.dir(tituloH1)
 tituloH1.innerText = "Llegó lo nuevo! 🎉"
-tituloH1.style.font = "bold 32px"
+tituloH1.style.font = "32px"
 
-// getElementByTagName
-let header = document.getElementsByTagName("header")
-console.dir(header)
-for (let i=0; i<headers.length; i++){
-    headers[i].style.backgroundColor = "black"
-}
-let footer = document.getElementsByTagName("footer")
-console.dir(footer)
-for (let i=0; i<footers.length; i++){
-    footers[i].style.backgroundColor = "black"
-}
+// getElementByClassName
+let headerYfooter = document.getElementsByClassName("headerYfooter")
+console.dir(headerYfooter)
+headerYfooter.style.backgroundColor = "black"
 
 //Array de productos
 const productos = [
