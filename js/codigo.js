@@ -201,25 +201,24 @@ tituloH1.style.font = "32px"
 // getElementByClassName
 let headerYfooter = document.getElementsByClassName("headerYfooter")
 console.dir(headerYfooter)
-headerYfooter.style.backgroundColor = "black"
-
+for (let i = 0; i < headerYfooter.length; i++) {
+    headerYfooter[i].style.backgroundColor = "black";
+}
 //Array de productos
 const productos = [
-    { id: 1, nombre: "Buzo", precio: 125 },
-    { id: 2, nombre: "Buzo", precio: 70 },
-    { id: 3, nombre: "Campera", precio: 50 },
-    { id: 4, nombre: "Campera", precio: 100 },
-    { id: 5, nombre: "Remera", precio: 200 },
-    { id: 6, nombre: "Remera", precio: 900 },
-    { id: 7, nombre: "Pantalón", precio: 100 },
-    { id: 8, nombre: "Pantalón", precio: 80 },
-    { id: 9, nombre: "Short", precio: 30 },
-    { id: 10, nombre: "Short", precio: 76 },
-    { id: 11, nombre: "Gorra", precio: 10 },
-    { id: 12, nombre: "Riñonera", precio: 9 },
+    { id: 1, nombre: "Buzo", precio: 125, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49" },
+    { id: 2, nombre: "Buzo", precio: 70, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 3, nombre: "Campera", precio: 50, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 4, nombre: "Campera", precio: 100, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 5, nombre: "Remera", precio: 200, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 6, nombre: "Remera", precio: 900, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 7, nombre: "Pantalón", precio: 100, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 8, nombre: "Pantalón", precio: 80, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 9, nombre: "Short", precio: 30, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 10, nombre: "Short", precio: 76, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 11, nombre: "Gorra", precio: 10, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
+    { id: 12, nombre: "Riñonera", precio: 9, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49"},
 ];
-
-campoCantidad.value = productos.length;
 
 //Tarjetas para productos
 let articuloCartas = document.getElementById('cartas');
@@ -276,19 +275,19 @@ boton.onclick = () => {
     }
 }
 
-const contenedor = document.getElementById('principal');
+const contenedor = document.getElementById('cambiarmodo');
 const boton = document.getElementById('mode');
 
 function pasarADark(){
     document.body.className='dark';
     contenedor.classList.replace('light','dark');
-    boton.innerText = 'Light Mode';
+    boton.innerText = 'Modo claro';
     localStorage.setItem('mode','dark');
 }
 
 function pasarALight(){
     document.body.className='light';
     contenedor.classList.replace('dark','light');
-    boton.innerText = 'Dark Mode';
+    boton.innerText = 'Modo oscuro';
     localStorage.setItem('mode','light');
 }
