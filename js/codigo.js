@@ -267,6 +267,9 @@ function agregarAlCarrito(producto) {
 // let usuario = localStorage.getItem('usuario');
 localStorage.setItem("Stock", JSON.stringify(productos))
 
+const contenedor = document.getElementById('cambiarmodo');
+const boton = document.getElementById('mode');
+
 boton.onclick = () => {
     if(localStorage.getItem('mode') == 'dark'){
         pasarALight();
@@ -274,9 +277,6 @@ boton.onclick = () => {
         pasarADark();
     }
 }
-
-const contenedor = document.getElementById('cambiarmodo');
-const boton = document.getElementById('mode');
 
 function pasarADark(){
     document.body.className='dark';
