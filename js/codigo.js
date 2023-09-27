@@ -1,5 +1,8 @@
 // Salida de datos a través de la consola
 console.log ("Bienvenido/a")
+setTimeout(()=> {
+    console.log("Estás navegando en BullyClothes")
+}, 3000)
 
 // Variables booleanas
 let envio = true
@@ -92,9 +95,9 @@ for (let i = 0; i < headerYfooter.length; i++) {
 }
 //Array de productos
 const productos = [
-    { id: 1, nombre: "Buzo", precio: 125, foto: "https://m.facebook.com/photo.php?fbid=270099209105932&id=100083175648328&set=pb.100083175648328.-2207520000&eav=AfZ6P9kCFoSpxZiHTdtXwBNo5KyQr3BJeGVp-i6TfUlE20OEsJGNWW1gm32tvHL1jPk&paipv=0&source=49" },
-    { id: 2, nombre: "Buzo", precio: 70, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fnotlost.store%2F&psig=AOvVaw1ygnN-odHlvh4IksxBfsJ_&ust=1695408513720000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLiq14SvvIEDFQAAAAAdAAAAABAE"},
-    { id: 3, nombre: "Campera", precio: 50, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fkingofthekongo.com.ar%2Fit%2Fproductos%2Fcampera-college-black%2F&psig=AOvVaw16h2mS9ErlA8GWcVWG9wWj&ust=1695408584177000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiqwqWvvIEDFQAAAAAdAAAAABAK"},
+    { id: 1, nombre: "Buzo", precio: 125, foto: "https://scontent.fcor10-4.fna.fbcdn.net/v/t39.30808-6/370474594_270099185772601_1107985306533774840_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=u_OnqCKue_sAX9oSIbK&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBgDCqdfk5Sas0ByuTLHPNxwH10ifvKPmkDFA9BEVU1dw&oe=651A18A9" },
+    { id: 2, nombre: "Buzo", precio: 70, foto: ""},
+    { id: 3, nombre: "Campera", precio: 50, foto: "https://acdn.mitiendanube.com/stores/219/431/products/d1afeeb9-61b1-405f-9078-a99854ab380a-1c3ca76870a3e8abda16935206629953-1024-1024.webp"},
     { id: 4, nombre: "Campera", precio: 100, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Ftussy.off%2F&psig=AOvVaw39-eM7nkPj9sK9UJjZ_vep&ust=1695408724907000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDnwuivvIEDFQAAAAAdAAAAABAE"},
     { id: 5, nombre: "Remera", precio: 200, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pimpum.ar%2FMLA-1422292536-remera-pimpum-hello-nasty-_JM&psig=AOvVaw3YIa_9xW3plqQBz49wP2nn&ust=1695408929474000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPiOl8qwvIEDFQAAAAAdAAAAABAE"},
     { id: 6, nombre: "Remera", precio: 900, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tiendamuwaka.com%2Fproductos%2Fremera-samples%2F&psig=AOvVaw0du6im9M8338USXb2kaRcV&ust=1695408986915000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJilxuWwvIEDFQAAAAAdAAAAABAE"},
