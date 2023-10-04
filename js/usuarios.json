@@ -1,0 +1,18 @@
+[
+	{
+		"nombre": "Maxi",
+		"password": "123"
+	},
+	{
+		"nombre": "Carlos",
+		"password": "456"
+	},
+	{
+		"nombre": "Pepe",
+		"password": "ABC"
+	},
+    {
+        "nombre": "Ana",
+        "password": "DEF"
+    }
+]

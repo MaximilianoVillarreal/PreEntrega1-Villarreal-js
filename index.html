@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/logo.png">
     <title>BullyClothes</title>
 </head>
 <body>
     <header class="headerYfooter">
         <div id="cambiarmodo">
-            <a id="mode" class="btn btn-outline-secondary" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modo oscuro</font></font></a>
+            <button id="mode" class="btn btn-outline-secondary" href="#"></button>
         </div>
-        <nav>
+        <nav id="navbar">
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./pages/buzos.html">Buzos</a></li>
@@ -25,6 +29,21 @@
     <hr>
     <main id="principal">
         <h1 id="titulo">Nuevo Contenido</h1>
+        <h2>Inicio de sesión</h2>
+		<form id="inicio">
+			<div class="formGroup">
+				<label for="nombre">Nombre</label>
+				<input class="input" type="text" id="nombre" name="nombre" />
+			</div>
+			<div>
+				<label for="password">Contraseña</label>
+				<input class="input" type="text" id="password" name="password" />
+			</div>
+			<div class="formGroup flex">
+				<button class="button" type="submit">Iniciar sesión</button>
+			</div>
+		</form>
+		<p class="mensajes hide" id="mensajes"></p>
         <div id="cartas"></div>
     </main>
     <footer class="headerYfooter">
