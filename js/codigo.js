@@ -3,7 +3,7 @@ console.log ("Bienvenido/a")
 setTimeout(()=> {
     console.log("Estás navegando en")
 }, 3000)
-
+let carrito =[]
 // Variables booleanas
 let envio = true
 if (envio) {
@@ -185,7 +185,7 @@ imagenes.forEach((imagen) => {
     // addEventListener
         boton.addEventListener('click', () => {
             console.log('Hiciste click en el boton cuyo id es ' + boton.id);
-            const prodACarro = listaProds.find((producto) => producto.id == boton.id);
+            const prodACarro = productos.find((producto) => producto.id == boton.id);
             console.log(prodACarro);
     //Cargar producto al carrito
             agregarAlCarrito(prodACarro);
@@ -258,7 +258,7 @@ console.log(carrito2);
 const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
 
-// const url = "./productos.json";
+const url = "./productos.json";
 
 // fetch(url)
 // .then(res => res.json())
