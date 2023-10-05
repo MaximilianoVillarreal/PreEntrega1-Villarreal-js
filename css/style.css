@@ -21,7 +21,6 @@ img {
 
 #titulo{
 	text-align: center;
-
 }
 h2{
 	margin-left: 2%;
@@ -33,12 +32,17 @@ h2{
 	background-repeat: no-repeat;
 } */
 
-#cartas{
-	
+header .navbar-nav a:hover{
+	color: orange;
+}
+
+main .button:hover{
+	color: orange;
 }
 
 .card{
 	border: solid;
+	border-color: black;
 	margin-bottom: 5%;
 }
 
@@ -54,7 +58,7 @@ body .light{
 form {
 	max-width: 400px;
 	margin: 0 auto;
-	background-color: #fff;
+	background-color: black;
 	padding: 20px;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -93,3 +97,12 @@ label {
 .hide {
 	display: none;
 }
+
+footer a:hover{
+	color: orange;
+}
+
+.mapa{
+	margin: 0% 50%;
+}
+

@@ -145,7 +145,7 @@ const productos = [
 ];
 
 // Navbar
-headerYfooter.className = 'navbar bg-primary'
+headerYfooter.className = 'navbar bg-dark border-bottom border-body'
 //Tarjetas para productos
 let articuloCartas = document.getElementById('cartas');
 articuloCartas.classList.add('container');
@@ -154,15 +154,16 @@ articuloCartas.classList.add('mx-auto');
 articuloCartas.classList.add('my-3');
 articuloCartas.classList.add('row');
 
+
 function renderizarProds(productos){
 for (const producto of productos){
     articuloCartas.innerHTML += `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-bg-dark mb-3" style="width: 18rem;">
     <img class="card-img-top" style="width: 18rem" src=${producto.foto} alt=${producto.nombre}/>
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">Precio $ ${producto.precio}</p>
-            <button id=${producto.id} class="btn btn-light compra">Comprar</button>
+            <button id=${producto.id} class="btn btn-warning compra">Comprar</button>
         </div>
     </div>
     `;
@@ -256,3 +257,18 @@ console.log(carrito2);
 // DateTime con librería Luxon
 const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
+
+// const url = "./productos.json";
+
+// fetch(url)
+// .then(res => res.json())
+// .then(data => mostrarProductos(data))
+
+// boton.addEventListener('click', (e)=>agregarAlCarro(e, productos))
+// function agregarAlCarro(e, productos){
+//     console.log(productos)
+//     console.log(e.target.id)
+
+//     const prodElegido = productos.find(el => el.id === parseInt(e.target.id))
+//     console.log(prodElegido)
+// }
