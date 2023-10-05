@@ -130,26 +130,29 @@ inicioFormulario.addEventListener("submit", (e) => {
 });
 //Array de productos
 const productos = [
-    { id: 1, nombre: "Buzo", precio: 30.000, foto: "https://scontent.fcor10-4.fna.fbcdn.net/v/t39.30808-6/370474594_270099185772601_1107985306533774840_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=u_OnqCKue_sAX9oSIbK&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBgDCqdfk5Sas0ByuTLHPNxwH10ifvKPmkDFA9BEVU1dw&oe=651A18A9" },
-    { id: 2, nombre: "Buzo", precio: 35.000, foto: "https://acdn.mitiendanube.com/stores/002/295/260/products/predator111-1eb0d3c7c573e440ee16898182419231-480-0.jpg"},
-    { id: 3, nombre: "Campera", precio: 38.000, foto: "https://acdn.mitiendanube.com/stores/219/431/products/d1afeeb9-61b1-405f-9078-a99854ab380a-1c3ca76870a3e8abda16935206629953-1024-1024.webp"},
-    { id: 4, nombre: "Campera", precio: 40.000, foto: ""},
-    { id: 5, nombre: "Remera", precio: 15.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pimpum.ar%2FMLA-1422292536-remera-pimpum-hello-nasty-_JM&psig=AOvVaw3YIa_9xW3plqQBz49wP2nn&ust=1695408929474000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPiOl8qwvIEDFQAAAAAdAAAAABAE"},
-    { id: 6, nombre: "Remera", precio: 14.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tiendamuwaka.com%2Fproductos%2Fremera-samples%2F&psig=AOvVaw0du6im9M8338USXb2kaRcV&ust=1695408986915000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJilxuWwvIEDFQAAAAAdAAAAABAE"},
-    { id: 7, nombre: "Pantalón", precio: 22.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCNlrJefpZl5%2F&psig=AOvVaw3EH50pegpqjn1vulhvzGZ4&ust=1695409006043000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDp0O6wvIEDFQAAAAAdAAAAABAE"},
-    { id: 8, nombre: "Pantalón", precio: 25.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsamples.com.ar%2Fproductos%2Fcargo-208-chocolate%2F&psig=AOvVaw0QtNyYYBmC4R_BvUd01nzy&ust=1695409048414000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKiF54KxvIEDFQAAAAAdAAAAABAO"},
-    { id: 9, nombre: "Short", precio: 13.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Ftussy.off%2F&psig=AOvVaw3vSXiwnA_VtluaeP1s5Dtr&ust=1695409082312000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDSg5OxvIEDFQAAAAAdAAAAABAE"},
-    { id: 10, nombre: "Short", precio: 10.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCJXCMCepf-x%2F&psig=AOvVaw3vSXiwnA_VtluaeP1s5Dtr&ust=1695409082312000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIDSg5OxvIEDFQAAAAAdAAAAABAQ"},
-    { id: 11, nombre: "Gorra", precio: 6.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCUgV6dAtbrk%2F&psig=AOvVaw3RKJXjJI8fre6uGkyzuSg6&ust=1695409163797000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJCM6bmxvIEDFQAAAAAdAAAAABAE"},
-    { id: 12, nombre: "Riñonera", precio: 9.000, foto: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lyst.com%2Fbags%2Fstussy-lightweight-belt-bag%2F&psig=AOvVaw3knouJQ11x5T_S3qt71b-b&ust=1695409388717000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNCw_qSyvIEDFQAAAAAdAAAAABAc"},
+    { id: 1, nombre: "Buzo", precio: 30000, foto: "https://scontent.fcor10-4.fna.fbcdn.net/v/t39.30808-6/370474594_270099185772601_1107985306533774840_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=u_OnqCKue_sAX9oSIbK&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBgDCqdfk5Sas0ByuTLHPNxwH10ifvKPmkDFA9BEVU1dw&oe=651A18A9" },
+    { id: 2, nombre: "Buzo", precio: 35000, foto: "https://acdn.mitiendanube.com/stores/002/295/260/products/predator111-1eb0d3c7c573e440ee16898182419231-480-0.jpg"},
+    { id: 3, nombre: "Campera", precio: 38000, foto: "https://acdn.mitiendanube.com/stores/219/431/products/d1afeeb9-61b1-405f-9078-a99854ab380a-1c3ca76870a3e8abda16935206629953-1024-1024.webp"},
+    { id: 4, nombre: "Campera", precio: 40000, foto: "../img/campera2.png"},
+    { id: 5, nombre: "Remera", precio: 15000, foto: "../img/remera1.png"},
+    { id: 6, nombre: "Remera", precio: 14000, foto: "../img/remera2.png"},
+    { id: 7, nombre: "Pantalón", precio: 22000, foto: "../img/pantalon1.png"},
+    { id: 8, nombre: "Pantalón", precio: 25000, foto: "../img/pantalon2.png"},
+    { id: 9, nombre: "Short", precio: 13000, foto: "../img/short1.png"},
+    { id: 10, nombre: "Short", precio: 10000, foto: "../img/short2.png"},
+    { id: 11, nombre: "Gorra", precio: 6000, foto: "../img/gorra.png"},
+    { id: 12, nombre: "Riñonera", precio: 9000, foto: "../img/riñonera.png"},
 ];
 
+// Navbar
+headerYfooter.className = 'navbar bg-primary'
 //Tarjetas para productos
 let articuloCartas = document.getElementById('cartas');
 articuloCartas.classList.add('container');
-articuloCartas.classList.add('gap-3');
+articuloCartas.classList.add('gap-5');
 articuloCartas.classList.add('mx-auto');
 articuloCartas.classList.add('my-3');
+articuloCartas.classList.add('row');
 
 function renderizarProds(productos){
 for (const producto of productos){
@@ -165,6 +168,16 @@ for (const producto of productos){
     `;
 }
 
+// Estilo imágenes de tarjetas
+const imagenes = document.querySelectorAll('img');
+
+const anchoDeseado = '250px';
+const altoDeseado = '250px';
+
+imagenes.forEach((imagen) => {
+    imagen.style.width = anchoDeseado;
+    imagen.style.height = altoDeseado;
+});
     //eventos
     let botones = document.getElementsByClassName('compra');
     for (const boton of botones) {
@@ -241,5 +254,5 @@ console.log(carrito2);
 // console.log(sumaTotal2);
 
 // DateTime con librería Luxon
-const dt = DateTime.now()
-console.log( dt.toString() )
+const fechaHoraActual = new Date();
+console.log(fechaHoraActual);
