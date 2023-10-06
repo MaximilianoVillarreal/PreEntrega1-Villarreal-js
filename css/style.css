@@ -21,18 +21,26 @@ img {
 
 #titulo{
 	text-align: center;
+	color: orange;
+	background-color: black;
 }
 h2{
 	margin-left: 2%;
+	color: black;
 }
-/* main{
-	background-image: linear-gradient(rgba(245, 232, 55, 0.8), rgba(245, 2532, 55, 0.8)), url(../img/fondo2.png);
+
+main{
+	background-image: linear-gradient(rgba(255, 128, 0, 0.7), rgba(255, 128, 0, 0.7)), url(../img/fondo11.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-} */
+}
 
 header .navbar-nav a:hover{
+	color: orange;
+}
+
+.navbar-brand{
 	color: orange;
 }
 
