@@ -147,6 +147,13 @@ const productos = [
 // Navbar
 headerYfooter.className = 'navbar bg-dark border-bottom border-body'
 //Tarjetas para productos
+
+const url = "./productos.json";
+
+fetch(url)
+.then(res => res.json())
+.then(data => mostrarProductos(data))
+
 let articuloCartas = document.getElementById('cartas');
 articuloCartas.classList.add('container');
 articuloCartas.classList.add('gap-5');
@@ -257,18 +264,3 @@ console.log(carrito2);
 // DateTime con librería Luxon
 const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
-
-const url = "./productos.json";
-
-// fetch(url)
-// .then(res => res.json())
-// .then(data => mostrarProductos(data))
-
-// boton.addEventListener('click', (e)=>agregarAlCarro(e, productos))
-// function agregarAlCarro(e, productos){
-//     console.log(productos)
-//     console.log(e.target.id)
-
-//     const prodElegido = productos.find(el => el.id === parseInt(e.target.id))
-//     console.log(prodElegido)
-// }
