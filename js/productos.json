@@ -2,97 +2,97 @@
 	{
 		"id": "1",
 		"nombre": "Buzo",
-		"marca": "",
-		"imagen": "",
-		"precio": 30.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "https://scontent.fcor10-4.fna.fbcdn.net/v/t39.30808-6/370474594_270099185772601_1107985306533774840_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=u_OnqCKue_sAX9oSIbK&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBgDCqdfk5Sas0ByuTLHPNxwH10ifvKPmkDFA9BEVU1dw&oe=651A18A9",
+		"precio": 30000,
+		"descripcion": "Buzo oversize Tussy"
 	},
 	{
 		"id": "2",
 		"nombre": "Buzo",
-		"marca": "",
-		"imagen": "",
-		"precio": 35.000,
-		"descripcion": ""
+		"marca": "Not Lost",
+		"imagen": "https://acdn.mitiendanube.com/stores/002/295/260/products/predator111-1eb0d3c7c573e440ee16898182419231-480-0.jpg",
+		"precio": 35000,
+		"descripcion": "Buzo oversize Not Lost"
 	},
 	{
 		"id": "3",
 		"nombre": "Campera",
-		"marca": "",
-		"imagen": "",
-		"precio": 38.000,
-		"descripcion": ""
+		"marca": "King of the Kongo",
+		"imagen": "https://acdn.mitiendanube.com/stores/219/431/products/d1afeeb9-61b1-405f-9078-a99854ab380a-1c3ca76870a3e8abda16935206629953-1024-1024.webp",
+		"precio": 38000,
+		"descripcion": "Campera urbana King of the Kongo"
 	},
 	{
 		"id": "4",
 		"nombre": "Campera",
-		"marca": "",
-		"imagen": "",
-		"precio": 40.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/campera2.png",
+		"precio": 40000,
+		"descripcion": "Campera universitaria Tussy"
 	},
 	{
 		"id": "5",
 		"nombre": "Remera",
-		"marca": "",
-		"imagen": "",
-		"precio": 15.000,
-		"descripcion": ""
+		"marca": "Samples",
+		"imagen": "../img/remera1.png",
+		"precio": 15000,
+		"descripcion": "Remera overzise samples"
 	},
 	{
 		"id": "6",
 		"nombre": "Remera",
-		"marca": "",
-		"imagen": "",
-		"precio": 14.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/remera2.png",
+		"precio": 14000,
+		"descripcion": "Remera overzise Tussy"
 	},
 	{
 		"id": "7",
 		"nombre": "Pantalón",
-		"marca": "",
-		"imagen": "",
-		"precio": 22.000,
-		"descripcion": ""
+		"marca": "Samples",
+		"imagen": "../img/pantalon1.png",
+		"precio": 22000,
+		"descripcion": "Pantalón cargo Samples"
 	},
 	{
 		"id": "8",
 		"nombre": "Pantalón",
-		"marca": "",
-		"imagen": "",
-		"precio": 25.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/pantalon2.png",
+		"precio": 25000,
+		"descripcion": "Pantalón cargo Tussy"
 	},
     {
 		"id": "9",
 		"nombre": "Short",
-		"marca": "",
-		"imagen": "",
-		"precio": 13.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/short1.png",
+		"precio": 13000,
+		"descripcion": "Short Tussy"
 	},
     {
 		"id": "10",
 		"nombre": "Short",
-		"marca": "",
-		"imagen": "",
-		"precio": 10.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/short2.png",
+		"precio": 10000,
+		"descripcion": "Short Tussy"
 	},
     {
 		"id": "11",
 		"nombre": "Gorra",
-		"marca": "",
-		"imagen": "",
-		"precio": 6.000,
-		"descripcion": ""
+		"marca": "Tussy",
+		"imagen": "../img/gorra.png",
+		"precio": 6000,
+		"descripcion": "Gorra visera redondeada Tussy"
 	},
     {
 		"id": "12",
-		"nombre": "",
-		"marca": "",
-		"imagen": "",
-		"precio": 9.000,
-		"descripcion": ""
+		"nombre": "Riñonera",
+		"marca": "Jordan",
+		"imagen": "../img/riñonera.png",
+		"precio": 9000,
+		"descripcion": "Riñonera Jordan"
 	}
 ]
