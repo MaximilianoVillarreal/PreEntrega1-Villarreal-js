@@ -110,7 +110,16 @@ footer a:hover{
 	color: orange;
 }
 
+footer{
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+
+footer ul{
+	margin: 50px 5px;
+}
+
 .mapa{
-	margin: 0% 50%;
+	margin: 5px 270px;
 }
 

@@ -12,18 +12,6 @@ if (envio) {
     console.log("Retiro en el local")
 }
 
-// Objetos
-const Buzo1 = {
-    Color: "Negro",
-    Marca: "Tussy",
-    Precio: "$30.000",
-    Vendido: false,
-    Talle: "L"
-}
-// const Buzo1 = new Buzo ("Negro", "Tussy", 30.000, "Vendido", "L")
-// console.log (Buzo1); {Color; "Negro", Marca; "Tussy", Precio; 30.000, Vendido; "false"}
-console.log (Buzo1)
-
 //Función Constructora
 function Remera(Color, Marca, Precio, Vendido, Talle){
     this.Color = Color
@@ -56,26 +44,6 @@ class Campera{
         this.Vendido = true
     }
 }
-const Campera1 = new Campera ("Rosa", "Nasty", 35.000, "Vendido", "M")
-const Campera2 = new Campera ("Azul", "Tussy", 40.000, "Vendido", "L")
-const Campera3 = new Campera ("Rojo", "Not Lost", 38.000, "Vendido", "XL")
-console.log (Campera2)
-
-// Arrays
-const listaArticulos = ["Buzos", "Camperas", "Remeras", "Pantalones", "Shorts", "Accesorios"]
-listaArticulos.splice (2, 0, "Remeras mangas largas")
-console.log (listaArticulos)
-let lista = listaArticulos.join ("-")
-// Funciones de Orden Superior
-// const encontrar = Campera.find((Campera) => Campera.Marca == "Nasty")
-// const existe = Campera.some (Campera => Campera.Marca == "Tussy")
-// console.log (existe)
-console.log (Math.max(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
-console.log (Math.min(5.000, 10.000, 15.000, 20.000, 25.000, 30.000, 35.000, 40.000))
-const Lanzamiento = new Date (2023, 7, 10)
-alert (Lanzamiento)
-// DOM
-console.dir(document.body)
 
 // getElementById
 let seccionPrincipal = document.getElementById("principal")
@@ -148,17 +116,16 @@ const productos = [
 headerYfooter.className = 'navbar bg-dark border-bottom border-body'
 //Tarjetas para productos
 
-const url = "./productos.json";
+const url = "./js/productos.json";
 
 fetch(url)
 .then(res => res.json())
-.then(data => mostrarProductos(data))
+.then(data => renderizarProds(data))
 
 let articuloCartas = document.getElementById('cartas');
 articuloCartas.classList.add('container');
 articuloCartas.classList.add('gap-5');
 articuloCartas.classList.add('mx-auto');
-articuloCartas.classList.add('my-3');
 articuloCartas.classList.add('row');
 
 
@@ -175,6 +142,8 @@ for (const producto of productos){
     </div>
     `;
 }
+
+// Botón Carrito
 
 // Estilo imágenes de tarjetas
 const imagenes = document.querySelectorAll('img');
@@ -208,59 +177,35 @@ function agregarAlCarrito(producto) {
     console.table(carrito);
     alert(`Agregaste ${producto.nombre} al carro 🛒`); }
 
-// Storage
-// localStorage.setItem('usuario','Maximiliano1112');
-// let usuario = localStorage.getItem('usuario');
 localStorage.setItem("Stock", JSON.stringify(productos))
 
-const contenedor = document.getElementById('cambiarmodo');
-const boton = document.getElementById('mode');
+// const contenedor = document.getElementById('cambiarmodo');
+// const boton = document.getElementById('mode');
 
-boton.onclick = () => {
-    if(localStorage.getItem('mode') == 'dark'){
-        pasarALight();
-    }else{
-        pasarADark();
-    }
-}
+// boton.onclick = () => {
+//     if(localStorage.getItem('mode') == 'dark'){
+//         pasarALight();
+//     }else{
+//         pasarADark();
+//     }
+// }
 
-function pasarADark(){
-    document.body.className='dark';
-    contenedor.classList.replace('light','dark');
-    boton.innerText = 'Modo claro';
-    localStorage.setItem('mode','dark');
-}
+// function pasarADark(){
+//     document.body.className='dark';
+//     contenedor.classList.replace('light','dark');
+//     boton.innerText = 'Modo claro';
+//     localStorage.setItem('mode','dark');
+// }
 
-function pasarALight(){
-    document.body.className='light';
-    contenedor.classList.replace('dark','light');
-    boton.innerText = 'Modo oscuro';
-    localStorage.setItem('mode','light');
-}
-// Operadores Avanzados
-
-const CamperaTussy = {
-    id:1112,
-    color: "rojo",
-    marca:"Tussy",
-    precio: 40.000,
-    talle: "L",
-}
-//Producto a Carrito
-const carrito2=[];
-
-const prodACarrito = {
-    ...CamperaTussy,
-    cantidad:2
-}
-
-carrito2.push(prodACarrito);
-console.log(carrito2);
-
-//rest parameters
-// const sumaTotal2=sumar(40.000,30.000,35.000,38.000,12.000);
-// console.log(sumaTotal2);
+// function pasarALight(){
+//     document.body.className='light';
+//     contenedor.classList.replace('dark','light');
+//     boton.innerText = 'Modo oscuro';
+//     localStorage.setItem('mode','light');
+// }
 
 // DateTime con librería Luxon
 const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
+
+// Alerts con SweetAlert
