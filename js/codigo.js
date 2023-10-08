@@ -128,7 +128,13 @@ for (const producto of productos){
         </div>
     </div>
     `;
-// Sweet Alert
+// aca estaba sweet
+}
+fetch(url)
+.then(res => res.json())
+.then(data => mostrarAlerta(data))
+function mostrarAlerta (producto){
+    // Sweet Alert
 const botonesCompra = document.querySelectorAll('button');
 botonesCompra.forEach((boton) => {
     boton.addEventListener('click', function () {
@@ -141,18 +147,6 @@ botonesCompra.forEach((boton) => {
         });
     });
 }
-
-// Botón Carrito
-const botonContenedor = document.getElementById("boton_contenedor")
-const boton = document.createElement("button")
-boton.innerText="Carrito 🛒"
-boton.className = "btn btn-dark"
-boton.id="bt_carrito"
-botonContenedor.appendChild(boton)
-// boton.onclick=() =>{
-//     function mostrarCarrito()
-//     botonCarrito.innerHTML = "";
-// }
 
 // Estilo textos tarjetas
 const texto = document.querySelectorAll('h5');
@@ -186,26 +180,12 @@ imagenes.forEach((imagen) => {
         boton.onmouseout = () => boton.classList.replace('btn-dark', 'btn-light');
     }
 }
-// renderizarProds(productos);
 
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     console.table(carrito);
-    // alert(`Agregaste ${producto.nombre} al carro 🛒`);
+    mostrarAlerta (producto)
 }
-
 // DateTime con librería Luxon
 const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
-
-// Alerts con SweetAlert
-renderizarProds.appendChild(button)
-producto.onclick =() => {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-    })
-}
