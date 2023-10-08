@@ -98,21 +98,6 @@ inicioFormulario.addEventListener("submit", (e) => {
 			}
 		});
 });
-//Array de productos
-// const productos = [
-//     { id: 1, nombre: "Buzo", precio: 30000, foto: "https://scontent.fcor10-4.fna.fbcdn.net/v/t39.30808-6/370474594_270099185772601_1107985306533774840_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=u_OnqCKue_sAX9oSIbK&_nc_ht=scontent.fcor10-4.fna&oh=00_AfBgDCqdfk5Sas0ByuTLHPNxwH10ifvKPmkDFA9BEVU1dw&oe=651A18A9" },
-//     { id: 2, nombre: "Buzo", precio: 35000, foto: "https://acdn.mitiendanube.com/stores/002/295/260/products/predator111-1eb0d3c7c573e440ee16898182419231-480-0.jpg"},
-//     { id: 3, nombre: "Campera", precio: 38000, foto: "https://acdn.mitiendanube.com/stores/219/431/products/d1afeeb9-61b1-405f-9078-a99854ab380a-1c3ca76870a3e8abda16935206629953-1024-1024.webp"},
-//     { id: 4, nombre: "Campera", precio: 40000, foto: "../img/campera2.png"},
-//     { id: 5, nombre: "Remera", precio: 15000, foto: "../img/remera1.png"},
-//     { id: 6, nombre: "Remera", precio: 14000, foto: "../img/remera2.png"},
-//     { id: 7, nombre: "Pantalón", precio: 22000, foto: "../img/pantalon1.png"},
-//     { id: 8, nombre: "Pantalón", precio: 25000, foto: "../img/pantalon2.png"},
-//     { id: 9, nombre: "Short", precio: 13000, foto: "../img/short1.png"},
-//     { id: 10, nombre: "Short", precio: 10000, foto: "../img/short2.png"},
-//     { id: 11, nombre: "Gorra", precio: 6000, foto: "../img/gorra.png"},
-//     { id: 12, nombre: "Riñonera", precio: 9000, foto: "../img/riñonera.png"},
-// ];
 
 // Navbar
 headerYfooter.className = 'navbar bg-dark border-bottom border-body'
@@ -135,7 +120,7 @@ function renderizarProds(productos){
 for (const producto of productos){
     articuloCartas.innerHTML += `
     <div class="card text-bg-dark mb-3" style="width: 18rem;">
-    <img class="card-img-top" style="width: 18rem" src="${producto.foto}" alt="${producto.nombre}"/>
+    <img class="card-img-top" style="width: 18rem" src="./${producto.imagen}" alt="${producto.nombre}"/>
         <div class="card-body">
             <h5 class="card-title">"${producto.nombre}"</h5>
             <p class="card-text">Precio $ ${producto.precio}</p>
@@ -143,6 +128,18 @@ for (const producto of productos){
         </div>
     </div>
     `;
+// Sweet Alert
+const botonesCompra = document.querySelectorAll('button');
+botonesCompra.forEach((boton) => {
+    boton.addEventListener('click', function () {
+    Swal.fire({
+        title: '¡Producto agregado al carrito!',
+        text: `Has agregado ${producto.nombre}`,
+        icon: 'success',
+        confirmButtonText: 'OK',
+            });
+        });
+    });
 }
 
 // Botón Carrito
@@ -157,6 +154,13 @@ botonContenedor.appendChild(boton)
 //     botonCarrito.innerHTML = "";
 // }
 
+// Estilo textos tarjetas
+const texto = document.querySelectorAll('h5');
+const tamañoDeseado = '12rem';
+
+texto.forEach((nombre) =>{
+    nombre.style.font = tamañoDeseado
+})
 // Estilo imágenes de tarjetas
 const imagenes = document.querySelectorAll('img');
 
@@ -187,34 +191,8 @@ imagenes.forEach((imagen) => {
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     console.table(carrito);
-    alert(`Agregaste ${producto.nombre} al carro 🛒`); }
-
-// localStorage.setItem("Stock", JSON.stringify(productos))
-
-// const contenedor = document.getElementById('cambiarmodo');
-// const boton = document.getElementById('mode');
-
-// boton.onclick = () => {
-//     if(localStorage.getItem('mode') == 'dark'){
-//         pasarALight();
-//     }else{
-//         pasarADark();
-//     }
-// }
-
-// function pasarADark(){
-//     document.body.className='dark';
-//     contenedor.classList.replace('light','dark');
-//     boton.innerText = 'Modo claro';
-//     localStorage.setItem('mode','dark');
-// }
-
-// function pasarALight(){
-//     document.body.className='light';
-//     contenedor.classList.replace('dark','light');
-//     boton.innerText = 'Modo oscuro';
-//     localStorage.setItem('mode','light');
-// }
+    // alert(`Agregaste ${producto.nombre} al carro 🛒`);
+}
 
 // DateTime con librería Luxon
 const fechaHoraActual = new Date();
@@ -222,7 +200,7 @@ console.log(fechaHoraActual);
 
 // Alerts con SweetAlert
 renderizarProds.appendChild(button)
-button.onclick =() => {
+producto.onclick =() => {
     Swal.fire({
         position: 'top-end',
         icon: 'success',

@@ -3,7 +3,7 @@
 		"id": "1",
 		"nombre": "Buzo Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/buzo1.png",
+		"imagen": "/img/buzo1.png",
 		"precio": 30000,
 		"descripcion": "Buzo oversize Tussy"
 	},
@@ -11,7 +11,7 @@
 		"id": "2",
 		"nombre": "Buzo Not Lost",
 		"marca": "Not Lost",
-		"imagen": "../img/buzo2.png",
+		"imagen": "/img/buzo2.png",
 		"precio": 35000,
 		"descripcion": "Buzo oversize Not Lost"
 	},
@@ -19,7 +19,7 @@
 		"id": "3",
 		"nombre": "Campera King of the Kongo",
 		"marca": "King of the Kongo",
-		"imagen": "../img/campera1.png",
+		"imagen": "/img/campera1.png",
 		"precio": 38000,
 		"descripcion": "Campera urbana King of the Kongo"
 	},
@@ -27,7 +27,7 @@
 		"id": "4",
 		"nombre": "Campera Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/campera2.png",
+		"imagen": "/img/campera2.png",
 		"precio": 40000,
 		"descripcion": "Campera universitaria Tussy"
 	},
@@ -35,7 +35,7 @@
 		"id": "5",
 		"nombre": "Remera Samples",
 		"marca": "Samples",
-		"imagen": "../img/remera1.png",
+		"imagen": "/img/remera1.png",
 		"precio": 15000,
 		"descripcion": "Remera overzise samples"
 	},
@@ -43,7 +43,7 @@
 		"id": "6",
 		"nombre": "Remera Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/remera2.png",
+		"imagen": "/img/remera2.png",
 		"precio": 14000,
 		"descripcion": "Remera overzise Tussy"
 	},
@@ -51,7 +51,7 @@
 		"id": "7",
 		"nombre": "Pantalón Samples",
 		"marca": "Samples",
-		"imagen": "../img/pantalon1.png",
+		"imagen": "/img/pantalon1.png",
 		"precio": 22000,
 		"descripcion": "Pantalón cargo Samples"
 	},
@@ -59,7 +59,7 @@
 		"id": "8",
 		"nombre": "Pantalón Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/pantalon2.png",
+		"imagen": "/img/pantalon2.png",
 		"precio": 25000,
 		"descripcion": "Pantalón cargo Tussy"
 	},
@@ -67,7 +67,7 @@
 		"id": "9",
 		"nombre": "Short Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/short1.png",
+		"imagen": "/img/short1.png",
 		"precio": 13000,
 		"descripcion": "Short Tussy"
 	},
@@ -75,7 +75,7 @@
 		"id": "10",
 		"nombre": "Short Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/short2.png",
+		"imagen": "/img/short2.png",
 		"precio": 10000,
 		"descripcion": "Short Tussy"
 	},
@@ -83,7 +83,7 @@
 		"id": "11",
 		"nombre": "Gorra Tussy",
 		"marca": "Tussy",
-		"imagen": "../img/gorra.png",
+		"imagen": "/img/gorra.png",
 		"precio": 6000,
 		"descripcion": "Gorra visera redondeada Tussy"
 	},
@@ -91,7 +91,7 @@
 		"id": "12",
 		"nombre": "Riñonera Jordan",
 		"marca": "Jordan",
-		"imagen": "../img/riñonera.png",
+		"imagen": "/img/riñonera.png",
 		"precio": 9000,
 		"descripcion": "Riñonera Jordan"
 	}
