@@ -13,12 +13,14 @@ if (envio) {
 }
 
 //Función Constructora
-function Remera(Color, Marca, Precio, Vendido, Talle){
-    this.Color = Color
-    this.Marca = Marca
-    this.Precio = Precio
-    this.Vendido = false
-    this.Talle = Talle
+class Remera{
+    constructor (Color, Marca, Precio, Vendido, Talle){
+        this.Color = Color
+        this.Marca = Marca
+        this.Precio = Precio
+        this.Vendido = false
+        this.Talle = Talle
+    }
 }
 const Remera1 = new Remera ("Blanco", "Not Lost", 12.000, "Vendido", "L")
 console.log (Remera1)
@@ -133,17 +135,27 @@ function renderizarProds(productos){
 for (const producto of productos){
     articuloCartas.innerHTML += `
     <div class="card text-bg-dark mb-3" style="width: 18rem;">
-    <img class="card-img-top" style="width: 18rem" src=${producto.foto} alt=${producto.nombre}/>
+    <img class="card-img-top" style="width: 18rem" src="${producto.foto}" alt="${producto.nombre}"/>
         <div class="card-body">
-            <h5 class="card-title">${producto.nombre}</h5>
+            <h5 class="card-title">"${producto.nombre}"</h5>
             <p class="card-text">Precio $ ${producto.precio}</p>
-            <button id=${producto.id} class="btn btn-warning compra">Comprar</button>
+            <button id="${producto.id}" class="btn btn-warning compra">Comprar</button>
         </div>
     </div>
     `;
 }
 
 // Botón Carrito
+const botonContenedor = document.getElementById("boton_contenedor")
+const boton = document.createElement("button")
+boton.innerText="Carrito 🛒"
+boton.className = "btn btn-dark"
+boton.id="bt_carrito"
+botonContenedor.appendChild(boton)
+// boton.onclick=() =>{
+//     function mostrarCarrito()
+//     botonCarrito.innerHTML = "";
+// }
 
 // Estilo imágenes de tarjetas
 const imagenes = document.querySelectorAll('img');
@@ -170,14 +182,14 @@ imagenes.forEach((imagen) => {
         boton.onmouseout = () => boton.classList.replace('btn-dark', 'btn-light');
     }
 }
-renderizarProds(productos);
+// renderizarProds(productos);
 
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     console.table(carrito);
     alert(`Agregaste ${producto.nombre} al carro 🛒`); }
 
-localStorage.setItem("Stock", JSON.stringify(productos))
+// localStorage.setItem("Stock", JSON.stringify(productos))
 
 // const contenedor = document.getElementById('cambiarmodo');
 // const boton = document.getElementById('mode');
@@ -209,3 +221,13 @@ const fechaHoraActual = new Date();
 console.log(fechaHoraActual);
 
 // Alerts con SweetAlert
+renderizarProds.appendChild(button)
+button.onclick =() => {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
