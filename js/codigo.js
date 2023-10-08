@@ -128,24 +128,6 @@ for (const producto of productos){
         </div>
     </div>
     `;
-// aca estaba sweet
-}
-fetch(url)
-.then(res => res.json())
-.then(data => mostrarAlerta(data))
-function mostrarAlerta (producto){
-    // Sweet Alert
-const botonesCompra = document.querySelectorAll('button');
-botonesCompra.forEach((boton) => {
-    boton.addEventListener('click', function () {
-    Swal.fire({
-        title: '¡Producto agregado al carrito!',
-        text: `Has agregado ${producto.nombre}`,
-        icon: 'success',
-        confirmButtonText: 'OK',
-            });
-        });
-    });
 }
 
 // Estilo textos tarjetas
@@ -180,6 +162,19 @@ imagenes.forEach((imagen) => {
         boton.onmouseout = () => boton.classList.replace('btn-dark', 'btn-light');
     }
 }
+
+fetch(url)
+.then(res => res.json())
+.then(data => mostrarAlerta(data))
+function mostrarAlerta (producto){
+    // Sweet Alert
+    Swal.fire({
+        title: '¡Producto agregado al carrito!',
+        text: `Has agregado ${producto.nombre}`,
+        icon: 'success',
+        confirmButtonText: 'OK',
+            });
+        };
 
 function agregarAlCarrito(producto) {
     carrito.push(producto);
